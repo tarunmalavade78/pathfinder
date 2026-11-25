@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Junior Web Design Intern", "company": "Bright Studio", "category": "Design", "location": "Remote", "type": "Part-time", "description": "Help create friendly pages and simple design mockups with a supportive team.", "tag": "Portfolio friendly" },
+  { "id": 2, "title": "Community Outreach Intern", "company": "Good Neighbour Project", "category": "Community", "location": "Hybrid · Bengaluru", "type": "Flexible", "description": "Support local events, write short updates, and help connect young people to opportunities.", "tag": "People skills" },
+  { "id": 3, "title": "Software Support Intern", "company": "Northstar Labs", "category": "Technology", "location": "Remote", "type": "Part-time", "description": "Learn how a software team answers questions and checks product quality.", "tag": "Mentor included" },
+  { "id": 4, "title": "Social Media Assistant", "company": "Green Steps", "category": "Marketing", "location": "On-site · Pune", "type": "Summer", "description": "Help plan positive, useful posts for an environmental education group.", "tag": "Creative work" }
+]

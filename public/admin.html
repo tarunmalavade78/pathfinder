@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5ef">
+  <title>Admin dashboard — PathFinder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="admin.js" defer></script>
+</head>
+<body class="admin-page">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="PathFinder home"><span class="brand-mark">✳</span><span>path<span class="brand-light">finder</span></span></a>
+    <nav class="admin-nav" aria-label="Admin navigation"><span id="admin-email"></span><a href="/">View website ↗</a><button type="button" id="logout-button" class="text-button">Log out</button></nav>
+  </header>
+  <main class="admin-main">
+    <div class="admin-heading"><div><p class="eyebrow">PATHFINDER / ADMIN</p><h1>Opportunity <em>desk.</em></h1><p>Manage learning paths and internships, and review expressions of interest.</p></div><span class="admin-badge">ADMIN ACCESS</span></div>
+    <section class="admin-panel">
+      <div class="admin-section-heading"><div><p class="eyebrow">01 / OPPORTUNITIES</p><h2>Internships</h2></div></div>
+      <form id="internship-form" class="admin-add-form">
+        <input name="title" required maxlength="150" placeholder="Role title" aria-label="Role title">
+        <input name="company" required maxlength="150" placeholder="Company" aria-label="Company">
+        <input name="category" required maxlength="80" placeholder="Category" aria-label="Category">
+        <input name="location" required maxlength="100" placeholder="Location" aria-label="Location">
+        <input name="type" required maxlength="80" placeholder="Work type" aria-label="Work type">
+        <input name="tag" required maxlength="80" placeholder="Tag" aria-label="Tag">
+        <textarea name="description" required maxlength="500" placeholder="Short description" aria-label="Short description"></textarea>
+        <button class="button" type="submit">Add internship <span>+</span></button>
+      </form>
+      <div id="internship-admin-list" class="admin-list" aria-live="polite"></div>
+    </section>
+    <section class="admin-panel">
+      <div class="admin-section-heading"><div><p class="eyebrow">02 / LEARNING</p><h2>Courses</h2></div></div>
+      <form id="course-form" class="admin-add-form">
+        <input name="title" required maxlength="150" placeholder="Course title" aria-label="Course title">
+        <input name="category" required maxlength="80" placeholder="Category" aria-label="Category">
+        <input name="level" required maxlength="80" placeholder="Level" aria-label="Level">
+        <input name="duration" required maxlength="80" placeholder="Duration" aria-label="Duration">
+        <input name="icon" required maxlength="12" placeholder="Icon" aria-label="Icon">
+        <textarea name="description" required maxlength="500" placeholder="Short description" aria-label="Short description"></textarea>
+        <button class="button" type="submit">Add course <span>+</span></button>
+      </form>
+      <div id="course-admin-list" class="admin-list" aria-live="polite"></div>
+    </section>
+    <section class="admin-panel">
+      <div class="admin-section-heading"><div><p class="eyebrow">03 / INBOX</p><h2>Applications</h2></div><button id="refresh-applications" class="text-button" type="button">Refresh ↻</button></div>
+      <div id="application-admin-list" class="application-admin-list" aria-live="polite"></div>
+    </section>
+    <p class="admin-demo-note">Demo admin access. Applications and listings are stored locally in the project’s data folder.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5ef"><meta name="description" content="Find practical courses and beginner-friendly internships with Youth Opportunity Hub.">
+  <title>Youth Opportunity Hub — Learn, grow, get started</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="#home" aria-label="Youth Opportunity Hub home"><span class="brand-mark">✳</span><span>path<span class="brand-light">finder</span></span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#courses">Explore skills</a><a href="#internships">Internships</a><a href="#about">About</a></nav>
+    <div class="header-actions"><a id="user-login-link" class="header-account-link" href="/login">Log in</a><button id="logout-button" class="header-account-link" type="button" hidden>Log out</button><a id="admin-login-link" class="header-admin-link" href="/login?role=admin">Admin</a><a class="button button-small" href="#internships">Find your next step <span>↗</span></a></div>
+  </header>
+  <main>
+    <section class="hero" id="home"><div class="hero-copy"><p class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEXT CHAPTER STARTS HERE</p><h1>Small steps.<br><span>Big possibilities.</span></h1><p class="hero-intro">Build useful skills, find your first experience, and shape a future that feels like yours.</p>
+      <div class="hero-actions"><a class="button" href="#courses">Explore learning <span>↗</span></a><a class="text-link" href="#internships">Browse internships <span>→</span></a></div>
+      <div class="hero-note"><div class="avatar-stack"><span>✦</span><span>↗</span><span>◉</span></div><p>A good place to start, whatever your starting point.</p></div>
+    </div><div class="hero-art" aria-label="Illustration of a person planning their next step"><div class="art-sun"></div><div class="art-label label-top">MAKE ROOM TO GROW <span>↗</span></div><div class="art-plant plant-one"><i></i><i></i><i></i><b></b></div><div class="art-plant plant-two"><i></i><i></i><b></b></div><div class="art-person"><div class="person-head"></div><div class="person-body"></div><div class="person-arm"></div><div class="person-leg left"></div><div class="person-leg right"></div></div><div class="art-step step-one">01</div><div class="art-step step-two">02</div><div class="art-step step-three">03</div><div class="art-label label-bottom">YOUR JOURNEY, YOUR PACE <span>✳</span></div></div>
+      <div class="hero-scroll"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+    <section class="intro-strip" id="about"><p>YOU BRING THE POTENTIAL.</p><p>WE HELP YOU FIND THE <em>PATH.</em></p><span class="strip-spark">✳</span></section>
+    <section class="section courses-section" id="courses"><div class="section-heading"><div><p class="eyebrow">01 / BUILD YOUR TOOLKIT</p><h2>Skills that open doors.</h2></div><p class="section-subtitle">Start with something that interests you. Learn at your own pace and grow from there.</p></div><div id="course-grid" class="course-grid" aria-live="polite"><p class="loading">Loading learning paths…</p></div></section>
+    <section class="internship-section" id="internships"><div class="section internship-inner"><div class="section-heading"><div><p class="eyebrow eyebrow-light">02 / TAKE THE FIRST STEP</p><h2>Real-world starts here.</h2></div><p class="section-subtitle">Explore welcoming opportunities designed to help you learn by doing.</p></div>
+      <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search role, skill, or place" aria-label="Search internships"></label><label class="select-wrap"><span class="sr-only">Filter by category</span><select id="category-filter"><option value="">All areas</option></select></label><span id="result-count" class="result-count"></span></div>
+      <div id="internship-list" class="internship-list" aria-live="polite"><p class="loading">Finding opportunities…</p></div><p class="demo-note">Demo listings for a student project. Always check an opportunity’s details and eligibility before applying.</p>
+    </div></section>
+    <section class="section contact-section" id="contact"><div class="contact-copy"><p class="eyebrow">03 / SAY HELLO</p><h2>Your next step<br>could start <em>today.</em></h2><p>Found an opportunity that feels right? Send a simple expression of interest. This demo saves your submission on this computer.</p><div class="contact-doodle">✳ <span>you’ve got this</span> ↗</div></div>
+      <p id="login-required" class="login-required">Log in or create a free account to send your interest. <a href="/login">Continue to login ↗</a></p><form id="application-form" class="application-form"><h3>Raise your hand.</h3><p class="form-intro">Tell us a little about yourself and what caught your eye.</p><label>Your name<input name="name" autocomplete="name" maxlength="100" required placeholder="e.g. Alex Rivera" readonly disabled></label><label>Email address<input name="email" type="email" autocomplete="email" maxlength="200" required placeholder="you@example.com" readonly disabled></label><label>Opportunity<input name="opportunity" id="opportunity-input" maxlength="150" required placeholder="Which role are you interested in?" disabled></label><label>A short note <span class="optional">(optional)</span><textarea name="message" rows="3" maxlength="1000" placeholder="What would you like us to know?" disabled></textarea></label><button class="button submit-button" type="submit" disabled>Send my interest <span>↗</span></button><p id="form-status" class="form-status" role="status"></p><p class="privacy-note">This demo stores form entries locally in <code>data/submissions.json</code>.</p></form>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand brand-footer" href="#home"><span class="brand-mark">✳</span><span>path<span class="brand-light">finder</span></span></a><p>Good things grow one step at a time.</p><span>© 2026 PathFinder · Student project demo</span></footer>
+</body></html>

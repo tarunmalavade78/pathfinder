@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Web Design Basics", "category": "Design", "level": "Beginner", "duration": "4 weeks", "description": "Learn how to plan and design clear, attractive websites.", "icon": "✳" },
+  { "id": 2, "title": "JavaScript Foundations", "category": "Technology", "level": "Beginner", "duration": "6 weeks", "description": "Build confidence with the language that makes websites interactive.", "icon": "⌘" },
+  { "id": 3, "title": "Speaking with Confidence", "category": "Life skills", "level": "All levels", "duration": "2 weeks", "description": "Practice presentations, interviews, and everyday communication.", "icon": "◉" },
+  { "id": 4, "title": "Career-ready CVs", "category": "Career skills", "level": "Beginner", "duration": "1 week", "description": "Create a clear CV and learn how to show your strengths.", "icon": "▤" }
+]
