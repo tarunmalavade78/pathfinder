@@ -53,8 +53,8 @@ If either command is missing, install the current Node.js LTS release from [node
    npm start
    ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in a browser.
-7. To stop the server, click the terminal and press **Control+C**.
+7. Open [http://localhost:3000](http://localhost:3000) in a browser.
+8. To stop the server, click the terminal and press **Control+C**.
 
 The optional auto-reload development command is `npm run dev` (Node.js 18.11 or newer).
 
@@ -84,7 +84,7 @@ Example request body for `POST /api/applications` (the signed-in account supplie
 }
 ```
 
-Create a public account or log in before submitting an expression of interest. Saved demo submissions appear in `data/submissions.json`. The form data stays in this local project folder; it is not sent to a real employer. Reset the file to `[]` to clear the demo submissions.
+Create a public account or log in before submitting an expression of interest. Saved demo submissions appear in `data/submissions.json`. The form data stays in this local project folder; it is not sent to a real employer. Reset the file to `[]` to clear the demo submissions. The public deployment is for fictional/test data only.
 
 ## Logins
 
@@ -95,6 +95,16 @@ Create a public account or log in before submitting an expression of interest. S
 Admin credentials are never stored in the source code. User passwords are stored as salted scrypt hashes in `data/users.json`; login sessions are held in memory and end when the server restarts. Do not commit `.env` or deploy with weak credentials.
 
 The admin dashboard is available at [http://localhost:3000/admin](http://localhost:3000/admin). Admins can add/remove courses and internships and review saved applications.
+
+## Deploy a public demo on Render
+
+The repository includes [`render.yaml`](./render.yaml) for a free Render web service. After pushing the code to GitHub:
+
+1. Sign in to [Render](https://dashboard.render.com/) and create a **Blueprint** from `tarunmalavade78/pathfinder` on the `main` branch.
+2. Set `ADMIN_EMAIL` and `ADMIN_PASSWORD` when prompted. Use a unique, strong password; these values are not stored in Git.
+3. Deploy the service. Render provides an `onrender.com` URL that works on phones, tablets, and computers.
+
+This is a free demo deployment, not production hosting. Render free services can sleep after inactivity and take about a minute to wake. Their filesystem is temporary: accounts, applications, and admin-edited listings can be lost when the service sleeps, restarts, or redeploys. Use fictional details only; do not collect real personal data or rely on this demo to retain submissions. For durable public use, migrate the JSON storage to a managed database and use an appropriate paid hosting plan.
 
 ## Folder structure
 
@@ -110,7 +120,9 @@ youth-opportunity-hub/
 │   ├── index.html
 │   └── styles.css
 ├── .gitignore
+├── .env.example
 ├── package.json
+├── render.yaml
 ├── README.md
 └── server.js
 ```
@@ -131,4 +143,4 @@ youth-opportunity-hub/
 
 ## Notes
 
-This is a learning/demo project. Listings are fictional sample data, and the form is not a real application service. Before deploying publicly, add appropriate privacy, security, and moderation practices and review any real opportunity for age requirements and safety.
+This is a learning/demo project. Listings are fictional sample data, and the form is not a real application service. The hosted demo warns visitors to use fictional details and does not send applications to employers. Before using real opportunities or collecting real personal information, add appropriate privacy, security, and moderation practices and review any age requirements and safety.

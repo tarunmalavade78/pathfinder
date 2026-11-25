@@ -181,7 +181,13 @@ app.post('/api/applications', requireRole('user'), async (req, res, next) => {
 });
 
 app.get('/api/admin/applications', requireRole('admin'), async (_req, res, next) => {
-  try { res.json(await readJson('submissions.json')); } catch (error) { next(error); }
+  try {
+    const submissions = await readJson('submissions.json').catch((error) => {
+      if (error.code === 'ENOENT') return [];
+      throw error;
+    });
+    res.json(submissions);
+  } catch (error) { next(error); }
 });
 
 for (const type of ['courses', 'internships']) {
